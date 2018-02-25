@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--parent-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    custom:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/rl"
+    android:background="#f2f2f2"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!--linear layout having two cardview children-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Card 1 - Consists of an image view with the country flag depicting the language to convert from   -->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:elevation="5dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="Convert From:" />
+                <ImageView
+                    android:id="@+id/convert_from_image"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@null"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:src="@drawable/india"/>
+                <TextView
+                    android:id="@+id/convert_from_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Hindi"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+            <!--Card 2 - Consists of an image view with the country flag depicting the language to convert to   -->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/convert_to_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:elevation="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Convert To:"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    <ImageView
+                        android:id="@+id/convert_to_image"
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@null"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:src="@drawable/usa"/>
+                    <TextView
+                        android:id="@+id/convert_to_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="English"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speak"
+                android:id="@+id/voice_to_voice_translate_button"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
